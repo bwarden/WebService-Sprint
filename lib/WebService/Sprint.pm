@@ -364,6 +364,7 @@ sub get_location {
 		die "Invalid MDN: $args{mdn}\n";
 	}
 } 
+
 =head2 check_perimeter
 
 Works similarly to get_location, but is intended to determine whether a given device is within a specified geofence. Takes the additional (required) parameters latitude, longitude (both in decimal degrees), and range (in meters). Returns location information, the specified geofence, and whether the device is inside the defined fence.
@@ -653,7 +654,7 @@ sub get_key {
 	return $self->{key};
 }
 
-=head2
+=head2 get_secret
 
 Retuns the object's stored shared secret. Provided for your convenience.
 

@@ -13,7 +13,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use DateTime;
 use Digest::MD5 qw(md5_hex);
@@ -42,20 +42,42 @@ Provides an object-oriented interface to Sprint's developer web services, includ
 Disclaimer: I am not affiliated with Sprint. This is an implementation of their publicly-available specifications. Sprint is probably a registered trademark, and is used here to highlight that this implementation is specific to the Sprint network.
 
 Implements some features of Sprint's developer web services. For more information, see:
- http://developer.sprint.com/site/global/sandbox/home.jsp
- http://developer.sprint.com/site/global/sandbox/sprint_services/sprint_services.jsp
+
+=over 4
+
+=item * L<http://developer.sprint.com/site/global/sandbox/home.jsp>
+
+=item * L<http://developer.sprint.com/site/global/sandbox/sprint_services/sprint_services.jsp>
+
+=back
 
 Currently supports:
- - presence
- - location (3G)
- - Geofence perimiter check
- - User management -- retrieving list of devices
+
+=over 4
+
+=item * presence
+
+=item * location (3G)
+
+=item * geofence perimeter check
+
+=item * User management -- retrieving list of devices
+
+=back
 
 Does not support:
- - All other geofence operations
- - SMS
- - User management -- adding or removing devices
- - iDen Content Uploader
+
+=over 4
+
+=item * All other geofence operations
+
+=item * SMS
+
+=item * User management -- adding or removing devices
+
+=item * iDen Content Uploader
+
+=back
 
 		use WebService::Sprint;
 

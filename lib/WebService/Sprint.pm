@@ -9,7 +9,7 @@ WebService::Sprint - an interface to Sprint's web services
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
@@ -88,6 +88,8 @@ Does not support:
 
 		# Get the list of devices associated with your developer account
 		my $devices = $ws->get_devices(
+
+		  # Optionally limit to devices in a particular state
 			type   => 'approved',
 		);
 
@@ -105,11 +107,11 @@ Does not support:
 		my $presence = $ws->check_presence(
 			mdn       => '2225551212',
 
-			# Geofence coordinates
+			# Geofence coordinates in Decimal Degrees
 			latitude  => 45.000,
 			longitude => -120.000,
 
-			# Radius (seems to need to be more than 2000m)
+			# Radius in meters (server expects at least 2000 meters)
 			radius    => 5000,
 		);
 
